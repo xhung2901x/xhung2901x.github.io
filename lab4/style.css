@@ -1,0 +1,84 @@
+.menu
+{
+    word-spacing: -1ch;
+}
+.menu-item
+{
+    position: relative;
+    vertical-align: top ;
+    word-spacing: normal;
+    display:inline-block;
+}
+.menu-link
+{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background-color:blue;
+    color: azure;
+}
+.menu-item:hover > .menu-link
+{
+    background-color: cyan;
+    color: darkgray;
+}
+.menu-item:hover > .sub-menu
+{
+display: block;
+}
+.menu-link.active
+{
+    background:crimson;
+    color: black;
+}
+.menu-item:hover .menu-link
+{
+    background-color:yellow;
+    color: black;
+}
+.sub-menu
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0%;
+    top: 100%;
+    list-style: none;
+    padding-left: 0%;
+    background-color: violet;
+
+
+}
+.sub-item:hover > .sub-link
+{
+    background-color: cornsilk;
+    color: black;
+}
+.sub-link
+{
+    display: block;
+    padding: 10px;
+    text-decoration:none;
+    color:black;
+}
+.sub-item .sub-menu
+{
+display: none;
+top: 0%;
+left: 100%;
+}
+.item
+{
+    display: none;
+    text-decoration: none;
+    padding: 10px;
+    background-color:cadetblue;
+    color: azure;
+}
+.item-name
+{
+    display: block;
+    padding: 10px;
+    text-decoration:none;
+    color:black;
+}

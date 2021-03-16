@@ -1,0 +1,108 @@
+*
+{
+    box-sizing: border-box;
+}
+#banner
+{
+    max-width: 100%;
+}
+.menu
+{
+    position: fixed;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: orange;
+    
+}
+.menu-item
+{
+    word-spacing: 1ch;
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: normal;
+    padding: 69px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.menu-item:hover
+{
+    background-color:orangered;
+}
+.menu-link  
+{
+    text-decoration: none;
+}
+.menu-link:hover
+{
+    color: white;
+}
+.menu1
+{
+    list-style: none;
+    position: relative;
+}
+.menu-item1
+{
+    display: block;
+    word-spacing: normal;
+    padding: 15px;
+    background-color: red;
+    inline-size: 20%;
+    
+}
+.menu-link1
+{
+    text-decoration: none;
+    padding: 15px;
+    
+}
+.menu-link1:hover
+{
+    background-color: orangered;
+    color: white;
+}
+.menu-link1:hover > .sub-menu1
+{
+    display: block;
+}
+.sub-menu1
+{
+    display: none;
+}
+.sub-item1
+{
+
+}
+.sub-link1
+{
+    text-decoration: none;
+}
+#message
+{
+    position:fixed;
+    right: 30px;
+    bottom: 30px;
+}
+#content
+{
+    display:inline-block;
+}
+.modal-overlay
+{
+    position: fixed;
+    top: 200px;
+    left: 900px;
+    right: 0;
+    bottom: 0;
+}
+.modal-content
+{
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+
+}
+.modal-content:first-child img
+{
+    max-width: 100%;
+}
