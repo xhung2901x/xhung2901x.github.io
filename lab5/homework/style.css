@@ -1,0 +1,46 @@
+table, tr, .colhead
+{
+    border: 1px solid gray;
+}
+table
+{
+    border-collapse: collapse;
+    margin: auto;
+    width: 50%;
+}
+.prize4
+{
+    float: left;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+}
+.prize7
+{
+    float: left;
+    width: 25%;
+    line-height: normal;
+    color: red;
+}
+th, .prize4, .prize7, td
+{
+    font-weight: bolder;
+}
+.rowhead
+{
+    color: red;
+}
+#db
+{
+    color: red;
+    font-weight:bold;
+    font-size: larger;
+}
+.row3
+{
+    border: 0px solid gray;
+}
+.bg, #row4, #row6
+{
+    background-color: #f0f8ff;
+}

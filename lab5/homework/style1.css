@@ -1,0 +1,42 @@
+*
+{
+    box-sizing: border-box;
+}
+.login
+{
+    
+    margin-top: 0px;
+    word-spacing: 0ch;
+   float: right;
+   padding-right: 90px;
+}
+#text
+{
+    float: right;
+    padding-right: 50px;
+}
+p
+{
+    font-weight: normal;
+    font-size: large;
+}
+h2
+{
+    font-size: large;
+}
+#signup:hover
+{
+    background-color:#4CAF50;
+}
+#popup
+{
+    display: none;
+}
+input:checked + .popup-wrapper
+{
+    display: block;
+}
+.popup-wrapper
+{
+    display: none;
+}
