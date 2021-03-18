@@ -1,0 +1,44 @@
+table, tr
+{
+    border: 1px solid gainsboro;
+}
+table
+{
+    border-collapse: collapse;
+    table-layout: fixed;
+    caption-side: bottom;
+    margin: auto;
+}
+th, td
+{
+    width: 200px;
+    margin: 10px;
+}
+tr:nth-child(2n)
+{
+    background-color:rgb(151, 202, 202);
+}
+th:hover
+{
+    background-color: mediumaquamarine;
+}
+td:hover
+{
+    background-color: mediumspringgreen;
+}
+img{
+    padding-top: 5px;
+    border-radius: 50%;
+}
+th
+{
+    text-align: left;
+}
+label:nth-child(1), .label
+{
+
+}
+textarea
+{
+    resize: none;
+}

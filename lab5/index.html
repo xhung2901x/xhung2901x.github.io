@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <caption>Danh sách lớp học</caption>
+        <thead>
+            <tr>
+                <th> Họ tên</th>
+                <th>Năm sinh</th>
+                <th>giới tính</th>
+                <th>Số ĐT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg">
+                
+                <td > <img src="icon.jpg" width="20" alt="">Hưng Đinh</td>
+                <td>1993</td>
+                <td>Nam</td>
+                <td>096*******</td>
+            </tr>
+            <tr>
+                <td><img src="icon.jpg" width="20" alt="">Quân</td>
+                <td>1998</td>
+                <td>Nam</td>
+                <td>0123*******</td>
+            </tr>
+            <tr class="bg">
+                <td><img src="icon.jpg" width="20" alt="">Hưng1</td>
+                <td>1996</td>
+                <td>Nam</td>
+                <td>0123*******</td>
+            </tr>
+            <tr>
+                <td><img src="icon.jpg" width="20" alt="">Hưng2</td>
+                <td>1997</td>
+                <td>Nam</td>
+                <td>0123*******</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" rowspan="2">Tổng số</td>
+                <td>4</td>
+            </tr>
+
+        </tfoot>
+    </table>
+</body>
+<body>
+    <form name="login" action="">
+    <div class="row">
+        <label for="text">Username</label>
+        <input id="text" name="text" type="text" required>
+    </div>
+    <div class="row">
+        <label>Password
+            <input type="password" name="password">
+        </label>
+        
+    </div>
+    <div class="row">
+        <input name="password" type="password">
+    </div>
+    <div class="row">
+        <input type="date" type="date">
+    </div>
+    <div class="row">
+        <input type="color" type="color">
+    </div>
+    <!-- <div class="row">
+        <input name="gender" value="male" type="radio">
+        <input name="gender" value="female" type="radio">
+        <input name="gender" value="gay" type="radio">
+    </div> -->
+    <div class="row">
+    <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="male">male</option>
+            <option value="male">female</option>
+            <option value="male">gay</option>
+        </select>
+    </div>
+    
+    <div>
+           <textarea name="" id="" cols="30" rows="10"></textarea> 
+    </div>
+
+    <div class="row">
+        <input name="hobbies" type="checkbox" value="shopping">
+        <input name="hobbies" type="checkbox" value="football">
+        <input name="hobbies" type="checkbox" value="music">
+    </div>
+
+
+    <input type="submit">
+    <input type="reset">
+
+    <button type="reset">xóa</button>
+</form>
+</body>
+</html>
