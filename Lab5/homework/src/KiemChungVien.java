@@ -28,7 +28,7 @@ public void input() {
         loiPhatHien = sc.nextInt();
         sc.nextLine();
         luongKCV = luongCoBan + (loiPhatHien*50000);
-        System.out.println("Lương của lập trình viên là: " + luongKCV + " Đ \n");
+        System.out.println("Lương của kiểm chứng viên là: " + luongKCV + " Đ \n");
         System.out.println("--------------------------------------------------");
 }
 
