@@ -187,7 +187,7 @@ public class ProductList extends Product {
                 listProduct.remove(listProduct.get(i));
             }
         }
-        System.out.println("Xóa thành công!!!");
+        System.out.println("Xóa thành công!!! \n");
         System.out.println("Danh sách sau khi xóa: ");
         listProduct.forEach(System.out::println);
     }
