@@ -11,11 +11,11 @@ public class ProductList extends Product {
 
     public ArrayList<Product> defaultList() {
         listProduct = new ArrayList<>();
-        listProduct.add(new Product("1", "GTX 1050", "VGA", "Nvidia", 3500000, 4000000, 10, 5, Category.VGA));
+        listProduct.add(new Product("1", "GTX 1050", "VGA", "Nvidia", 3500000, 4000000, 10, 35, Category.VGA));
         listProduct.add(new Product("2", "GTX 1660", "VGA", "Nvidia", 7000000, 7500000, 8, 4, Category.VGA));
         listProduct.add(new Product("3", "GTX 2060", "VGA", "Nvidia", 10000000, 11000000, 9, 3, Category.VGA));
         listProduct.add(new Product("4", "SSD Samsung 256GB 860 EVO", "SSD", "Samsung", 1200000, 1500000, 20, 10,Category.SSD));
-        listProduct.add(new Product("5", "SSD Samsung 512GB 960 EVO", "SSD", "Samsung", 5000000, 5500000, 22, 11,Category.SSD));
+        listProduct.add(new Product("5", "SSD Samsung 512GB 960 EVO", "SSD", "Samsung", 5000000, 5500000, 32, 30,Category.SSD));
         listProduct.add(new Product("6", "SSD WD 512GB", "SSD", "WesternDigital", 2300000, 2800000, 21, 11, Category.SSD));
         listProduct.add(new Product("7", "Ram Corsair 8GB DDR4", "Ram", "Corsair", 1000000, 1300000, 31, 15, Category.MEMORY));
         listProduct.add(new Product("8", "Ram Gskill 16GB DDR4", "Ram", "Gskill", 1100000, 1350000, 10, 5, Category.MEMORY));
@@ -143,40 +143,42 @@ public class ProductList extends Product {
 
     public void editProduct() {
         int count = 0;
-        System.out.println("Nhập tên sản phẩm muốn sửa: ");
+        System.out.println("Nhập mã sản phẩm muốn sửa: ");
         String fixProduct = sc.nextLine();
         for (int i = 0; i < listProduct.size(); i++) {
-            if (listProduct.get(i).getTen().contains(fixProduct)) {
+            // if (listProduct.get(i).getTen().contains(fixProduct)) {
+                if (listProduct.get(i).getMa().equalsIgnoreCase(fixProduct)) {
                 System.out.println(listProduct.get(i).toString());
                 System.out.print("Nhập tên mới: ");
                 String name = sc.nextLine();
                 listProduct.get(i).setTen(name);
-                System.out.print("Nhập mô tả mới: ");
-                String describe = sc.nextLine();
-                listProduct.get(i).setMoTa(describe);
-                System.out.print("Nhập giá nhập mới: ");
-                int importPrice = sc.nextInt();
-                listProduct.get(i).setGiaNhap(importPrice);
                 System.out.print("Nhập giá bán mới: ");
                 int salePrice = sc.nextInt();
                 listProduct.get(i).setGiaBan(salePrice);
-                System.out.print("Nhập số lượng mới: ");
-                int amount = sc.nextInt();
-                listProduct.get(i).setSoLuongTon(amount);
+                System.out.print("Nhập giá nhập mới: ");
+                int importPrice = sc.nextInt();
+                listProduct.get(i).setGiaNhap(importPrice);
+                System.out.print("Nhập hãng sx mới: ");
+                String brand = sc.nextLine();
+                listProduct.get(i).setHang(brand);
+                System.out.print("Nhập mô tả mới: ");
+                String describe = sc.nextLine();
+                listProduct.get(i).setMoTa(describe);
                 System.out.print("Nhập số lượng bán mới: ");
                 int amountSale = sc.nextInt();
                 listProduct.get(i).setSoLuongBan(amountSale);
+                System.out.print("Nhập số lượng tồn mới: ");
+                int amount = sc.nextInt();
+                listProduct.get(i).setSoLuongTon(amount);
                 sc.nextLine();
-                System.out.print("Nhập nhãn hiệu mới: ");
-                String brand = sc.nextLine();
-                listProduct.get(i).setHang(brand);
                 count++;
                 System.out.println("Sản phẩm sau khi sửa là: ");
                 System.out.println(listProduct.get(i).toString());
-            }
+            } 
         }
         if (count == 0) {
             System.out.println("Không tìm thấy sản phẩm");
+            
         }
     }
 
@@ -187,7 +189,7 @@ public class ProductList extends Product {
                 listProduct.remove(listProduct.get(i));
             }
         }
-        System.out.println("Xóa thành công!!!");
+        System.out.println("Xóa thành công!!! \n");
         System.out.println("Danh sách sau khi xóa: ");
         listProduct.forEach(System.out::println);
     }
@@ -254,5 +256,27 @@ public class ProductList extends Product {
         }
 
     }
+
+    public void checkSoLuongTon (){
+        String check;
+        check = sc.nextLine();
+        for (int i = 0; i < listProduct.size(); i++) {
+            if (listProduct.get(i).getTen().equalsIgnoreCase(check)){
+                System.out.println("Số lượng còn lại của sản phẩm " + "'"+ listProduct.get(i).getTen() +"'" + " là: " + listProduct.get(i).getSoLuongTon());
+            } else{
+                System.out.println("Nhập lại tên sản phẩm: ");
+                checkSoLuongTon();
+            }
+        }
+    }
+
+    public void checkBestSellProduct(){
+        for (int i = 0; i < listProduct.size(); i++) {
+            if(listProduct.get(i).getSoLuongBan()>=30){
+                System.out.println(listProduct.get(i).toString());
+            }
+        }
+    }
+
 
 }
